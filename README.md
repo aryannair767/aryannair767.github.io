@@ -1,4 +1,4 @@
-# Aryan Nair - Data Analytics Portfolio
+# Data Analytics Portfolio
 
 **Portfolio URL:** [https://aryannair767.github.io/](https://aryannair767.github.io/)
 
