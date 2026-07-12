@@ -1,32 +1,28 @@
-Massively by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# aryannair767.github.io
+# Aryan Nair - Data Analytics Portfolio
 
+**Portfolio URL:** [https://aryannair767.github.io/](https://aryannair767.github.io/)
 
-This is Massively, a text-heavy, article-oriented design built around a huge background
-image (with a new parallax implementation I'm testing) and scroll effects (powered by
-Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
-that fulfills a few user requests and makes use of some new techniques I've been wanting
-to try out. Enjoy it :)
+Data Science undergraduate focused on data analytics. I design and implement end-to-end analytical pipelines, converting raw, chaotic datasets into structured data models and actionable business insights.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+---
 
-(* = not included)
+## Technical Skills
 
-AJ
-aj@lkn.io | @ajlkn
+*   **Data Analysis & Querying**: SQL (MySQL), Python (Pandas)
+*   **Business Intelligence**: Power BI (DAX), Tableau, Excel
+*   **Version Control**: Git, GitHub
 
+---
 
-Credits:
+## Selected Projects
 
-	Demo Images:
-		Unsplash (unsplash.com)
+### [Retail Sales Analytics Pipeline](https://github.com/aryannair767/end-to-end-retail-sales-analysis)
+*   **Objective**: Build a complete retail analytics environment.
+*   **Methodology**: Cleaned and standardized raw data using MySQL. Conducted exploratory SQL analysis to identify key performance indicators.
+*   **Result**: Developed an interactive Power BI dashboard featuring year-over-year growth tracking and time-intelligence DAX measures.
 
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+### [Data Professional Survey Dashboard](https://github.com/aryannair767/data-professional-survey-dashboard)
+*   **Objective**: Analyze industry trends among data professionals.
+*   **Methodology**: Processed a dataset of 630 professionals using Power Query to standardize geographic data and numeric salary conversions.
+*   **Result**: Created an interactive Power BI dashboard to visualize compensation and career trajectory trends.
