@@ -1,717 +1,201 @@
-<!DOCTYPE HTML>
-<!--
-	Based on Massively by HTML5 UP (html5up.net/massively) | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	Customized for Aryan Nair's data analyst portfolio
--->
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Aryan Nair — Data Analyst</title>
-		<meta name="description" content="Data analytics portfolio by Aryan Nair — SQL, Power BI, and Python projects. Currently seeking a first data analyst internship." />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+<meta charset="utf-8"/>
+<title>Aryan Nair — Data Analyst</title>
+<meta name="description" content="Data analytics portfolio by Aryan Nair — SQL, Power BI, and Python projects. Currently seeking a first data analyst internship."/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#f7f7f7"/>
+<meta property="og:title" content="Aryan Nair — Data Analyst"/>
+<meta property="og:description" content="SQL, Power BI, and Python projects. Open to data analyst internships."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="images/pic10.jpg"/>
+<link rel="stylesheet" href="assets/css/style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+<nav id="sidebar">
+<div class="sidebar-brand">
+<h1>Aryan Nair</h1>
+<p>Data Analyst · SQL · Power BI · Python</p>
+</div>
+<div class="sidebar-nav">
+<ul>
+<li><a href="#about" class="sidebar-link active" data-nav-target="about">About</a></li>
+<li><a href="#skills" class="sidebar-link" data-nav-target="skills">Skills</a></li>
+<li><a href="#projects" class="sidebar-link" data-nav-target="projects">Projects</a></li>
+<li><a href="#contact" class="sidebar-link" data-nav-target="contact">Contact</a></li>
+</ul>
+</div>
+<div class="sidebar-footer">
+<p>Find me on</p>
+<div class="social-icons">
+<a href="https://github.com/aryannair767" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/aryannair767/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="mailto:aryannair767@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+</nav>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div id="main">
+<header class="mobile-header" id="mobileHeader">
+<button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+<span class="mobile-brand">Aryan Nair</span>
+</header>
+<div class="inner">
+<section id="about">
+<div class="about-grid">
+<div class="about-left">
+<div class="banner reveal">
+<h1>Hi, I'm Aryan Nair</h1>
+<p class="banner-subtitle">Data Analyst · Portfolio</p>
+<p class="banner-bio">Data Science undergrad with a singular focus on data analytics. I specialize in building end-to-end analytical pipelines, from cleaning &amp; analyzing chaotic datasets using Excel, MySQL, and Pandas, to surfacing actionable business insights through interactive Power BI dashboards.</p>
+<div class="banner-actions">
+<a href="#projects" class="btn btn-primary">View Projects</a>
+<a href="resume.pdf" target="_blank" rel="noopener" class="btn btn-outline"><i class="fas fa-file-alt"></i> View Resume</a>
+<a href="https://github.com/aryannair767" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+</div>
+</div>
+</div>
+<div class="about-right reveal">
+<div class="profile-placeholder">
+<img src="images/MY%20PIC.jpeg" alt="Aryan Nair" class="profile-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+<div class="profile-fallback" style="display:none"><i class="fas fa-user"></i></div>
+</div>
+</div>
+</div>
+<p class="sr-only">SQL query: SELECT name, focus, stack, status FROM analysts WHERE name = 'Aryan Nair';</p>
+<div class="db-panel reveal">
+<div class="db-panel-bar" aria-hidden="true">
+<span class="dot"></span><span class="dot"></span><span class="dot"></span>
+</div>
+<pre class="db-query" id="sqlQuery" aria-hidden="true"><span class="db-line"><span class="db-ln">1</span><span class="db-code">SELECT name, focus, stack, status</span></span><span class="db-line"><span class="db-ln">2</span><span class="db-code">FROM analysts</span></span><span class="db-line"><span class="db-ln">3</span><span class="db-code">WHERE name = 'Aryan Nair';</span></span></pre>
+<div class="db-divider"></div>
+<div class="db-results-wrap">
+<table class="db-table" id="sqlResult">
+<thead>
+<tr><th>name</th><th>focus</th><th>stack</th><th>status</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Aryan Nair</td>
+<td>Data Analytics</td>
+<td>Excel · SQL · Power BI · Python(Pandas)</td>
+<td>Open to internships</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
 
-		<!-- Open Graph (controls how this looks when shared on LinkedIn/etc) -->
-		<meta property="og:title" content="Aryan Nair — Data Analyst" />
-		<meta property="og:description" content="SQL, Power BI, and Python projects. Open to data analyst internships." />
-		<meta property="og:type" content="website" />
-		<meta property="og:image" content="images/pic10.jpg" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-		<!-- Custom fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-		<!-- Custom theme overrides -->
-		<style>
-			:root {
-				--bg: #12161c;
-				--surface: #1a2029;
-				--surface-alt: #202836;
-				--accent: #e8a33d;
-				--accent-2: #4fc3b0;
-				--text: #e9edf1;
-				--text-muted: #9fb0c2;
-				--border: #2a3240;
-			}
-
-			body, html {
-				background: var(--bg);
-				color: var(--text);
-			}
-
-			body, input, select, textarea {
-				font-family: 'IBM Plex Sans', sans-serif;
-				font-weight: 600;
-			}
-
-			h1, h2, h3, h4, h5, h6 {
-				font-family: 'IBM Plex Sans', sans-serif;
-				font-weight: 700;
-				letter-spacing: -0.02em;
-			}
-
-			a {
-				color: var(--accent);
-				transition: color 0.2s ease;
-			}
-			a:hover {
-				color: var(--accent-2);
-			}
-
-			#header .logo {
-				color: var(--text);
-				font-weight: 700;
-				letter-spacing: -0.01em;
-			}
-
-			/* --- Navigation Menu (Normal Colors) --- */
-			#nav ul.links a {
-				color: var(--text-muted) !important;
-				border: none;
-				transition: color 0.2s ease, background-color 0.2s ease;
-			}
-			
-			/* Removes the yellow, makes the text crisp white, and adds a subtle dark background to the active tab */
-			#nav ul.links a:hover,
-			#nav ul.links li.active a {
-				color: var(--text) !important;
-				background-color: var(--surface-alt) !important; 
-			}
-			
-			/* --- Original Brand Colors for Social Logos --- */
-			#nav ul.icons a {
-				transition: color 0.2s ease;
-			}
-			
-			/* LinkedIn Original Blue */
-			#nav ul.icons a.fa-linkedin {
-				color: #0A66C2 !important;
-			}
-			#nav ul.icons a.fa-linkedin:hover {
-				color: #4da4ff !important; /* Slightly brighter blue on hover to pop against the dark background */
-			}
-			
-			/* GitHub Original Color (White is the official brand standard for dark mode) */
-			#nav ul.icons a.fa-github {
-				color: #ffffff !important;
-			}
-			#nav ul.icons a.fa-github:hover {
-				color: var(--text-muted) !important;
-			}
-			.button {
-				background: var(--accent);
-				color: var(--bg) !important;
-				border-radius: 6px;
-				font-weight: 700;
-				border: none;
-				transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-			}
-			.button:hover {
-				background: var(--accent-2);
-			}
-			.button.github-button {
-				background: var(--accent-2);
-				color: var(--bg) !important;
-			}
-			.button.github-button:hover {
-				background: var(--accent-2);
-			}
-			.button.icon.brands {
-				background: transparent;
-				border: 1px solid var(--border);
-				color: var(--text) !important;
-			}
-			.button.icon.brands:hover {
-				border-color: var(--accent);
-				color: var(--accent) !important;
-			}
-
-
-
-
-
-			#main, .post, #footer {
-				background: var(--surface);
-				border-color: var(--border);
-			}
-
-			.post {
-				border-radius: 6px;
-				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-			}
-
-			.post header .date {
-				font-family: 'IBM Plex Mono', monospace;
-				text-transform: uppercase;
-				letter-spacing: 0.08em;
-				font-size: 0.75rem;
-				color: var(--accent-2);
-			}
-
-			#copyright {
-				color: var(--text-muted);
-			}
-			#copyright a {
-				color: var(--text-muted);
-			}
-
-			/* About section */
-			.about-block {
-				padding: 3em 3em 1em 3em;
-				background: var(--surface);
-				border-bottom: solid 1px var(--border);
-			}
-			.about-block p {
-				color: var(--text-muted);
-				max-width: 42em;
-			}
-			.stack-tags {
-				list-style: none;
-				display: flex;
-				flex-wrap: wrap;
-				gap: 0.6em;
-				padding: 0;
-				margin-top: 1em;
-			}
-			.stack-tags li {
-				font-family: 'IBM Plex Mono', monospace;
-				font-size: 0.8rem;
-				padding: 0.45em 0.9em;
-				border: 1px solid var(--border);
-				border-radius: 999px;
-				color: var(--accent-2);
-				font-weight: 600;
-			}
-
-			/* "In progress" project card */
-			article.in-progress {
-				border: 1px dashed var(--border);
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-			}
-			article.in-progress p {
-				color: var(--text-muted);
-			}
-
-			/* SQL hero — signature element */
-			#intro.sql-hero {
-				background: var(--bg);
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
-				padding: 4em 6em;
-			}
-			.sql-terminal {
-				background: var(--surface-alt);
-				border: 1px solid var(--border);
-				border-radius: 6px;
-				box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-				padding: 1em 1.2em;
-				margin-bottom: 1.2em;
-				max-width: 28em;
-				width: 100%;
-				text-align: left;
-			}
-			.sql-terminal-dots {
-				display: flex;
-				gap: 6px;
-				margin-bottom: 0.8em;
-			}
-			.sql-terminal-dots span {
-				width: 9px;
-				height: 9px;
-				border-radius: 50%;
-				background: var(--border);
-				display: inline-block;
-			}
-			.sql-query {
-				font-family: 'IBM Plex Mono', monospace;
-				font-size: 0.85rem;
-				line-height: 1.6;
-				color: var(--text);
-				white-space: pre-wrap;
-				margin: 0;
-				min-height: 4.6em;
-			}
-			.sql-kw { color: var(--accent-2); }
-			.sql-str { color: var(--accent); }
-			.sql-cursor {
-				display: inline-block;
-				width: 7px;
-				height: 1em;
-				background: var(--accent);
-				vertical-align: middle;
-				animation: blink 1s step-end infinite;
-			}
-			@keyframes blink {
-				50% { opacity: 0; }
-			}
-			.sql-result {
-				border-collapse: collapse;
-				margin-bottom: 1.5em;
-				font-family: 'IBM Plex Mono', monospace;
-				font-size: 0.75rem;
-				max-width: 58em;
-				width: 100%;
-				opacity: 0;
-				transform: translateY(6px);
-				transition: opacity 0.6s ease, transform 0.6s ease;
-			}
-			.sql-result.visible {
-				opacity: 1;
-				transform: translateY(0);
-			}
-			.sql-result th, .sql-result td {
-				border: 1px solid var(--border);
-				padding: 0.45em 0.7em;
-				text-align: left;
-			}
-			.sql-result th {
-				color: var(--accent-2);
-				font-weight: 700;
-			}
-			.sql-result td {
-				color: var(--text-muted);
-			}
-			#intro.sql-hero h1 {
-				font-size: 2.6em;
-				margin-top: 0;
-				margin-bottom: 0.3em;
-			}
-			#intro.sql-hero p.tagline {
-				color: var(--text-muted);
-				max-width: 34em;
-				margin-bottom: 1.6em;
-			}
-			.sql-hero .actions {
-				justify-content: center;
-			}
-
-			@media screen and (max-width: 736px) {
-				#intro.sql-hero {
-					padding: 3em 1.5em;
-				}
-				#intro.sql-hero h1 {
-					font-size: 1.8em;
-				}
-			}
-
-			/* Fix oversized/jumping header on scroll */
-			#header,
-			#header.alt {
-				position: relative !important;
-				background: transparent !important;
-				border: none !important;
-				box-shadow: none !important;
-				text-align: left !important;
-				padding: 1.5em 2em !important;
-				transform: none !important;
-				transition: none !important;
-			}
-			#header .logo,
-			#header.alt .logo {
-				font-size: 1.1em !important;
-				border: none !important;
-				padding: 0 !important;
-				background: none !important;
-				display: inline-block !important;
-				transform: none !important;
-				transition: color 0.2s ease !important;
-			}
-
-
-			/* Full-width divider above footer */
-			#footer {
-				border-top: 1px solid var(--border);
-			}
-
-
-			/* Secondary/outline button (used for Resume CTA) */
-            .button.icon.outline {
-                background: transparent;
-                border: 1px solid var(--border);
-                color: var(--text) !important;
-            }
-            .button.icon.outline:hover {
-                background: transparent;
-                border-color: var(--accent);
-                color: var(--accent) !important;
-            }
-
-			/* Respect OS-level reduced motion preference */
-			@media (prefers-reduced-motion: reduce) {
-				.sql-cursor,
-				.jupyter-blink {
-					animation: none !important;
-				}
-				.sql-result,
-				.jupyter-arrow,
-				.jupyter-output,
-				.csv-arrow-icon,
-				.clean-table,
-				.csv-stream .csv-line {
-					transition: none !important;
-					animation: none !important;
-					opacity: 1 !important;
-					transform: none !important;
-				}
-			}
-
-			/* Carousel — Retail Sales Analytics Pipeline image */
-			.carousel-container {
-				display: flex;
-				align-items: center;
-				gap: 0.6em;
-			}
-			.carousel-container .image.main {
-				flex: 1;
-				min-width: 0;
-			}
-			
-			.carousel-arrow {
-				flex-shrink: 0;
-				background: none !important;
-				border: none !important;
-				outline: none !important;
-				padding: 0.2em 0.3em;
-				color: var(--text-muted);
-				font-size: 2.2em;
-				line-height: 1;
-				cursor: pointer;
-				transition: color 0.2s ease;
-			}
-			.carousel-arrow:hover {
-				color: var(--accent-2);
-			}
-			.carousel-arrow:focus,
-			.carousel-arrow:active,
-			.carousel-arrow:focus-visible {
-				outline: none !important;
-				box-shadow: none !important;
-				border: none !important;
-				background: transparent !important;
-				color: var(--accent-2);
-			}
-            /* --- Mobile Hamburger Menu Overrides --- */
-			/* Fixes the text links (Home, Projects, About) */
-			#navPanel a {
-				color: var(--text-muted) !important;
-			}
-			#navPanel a:hover {
-				color: var(--text) !important;
-			}
-			
-			/* Fixes the LinkedIn Mobile Icon */
-			#navPanel a.fa-linkedin {
-				color: #0A66C2 !important;
-			}
-			#navPanel a.fa-linkedin:hover {
-				color: #4da4ff !important;
-			}
-			
-			/* Fixes the GitHub Mobile Icon */
-			#navPanel a.fa-github {
-				color: #ffffff !important;
-			}
-			#navPanel a.fa-github:hover {
-				color: var(--text-muted) !important;
-			}
-		</style>
-	</head>
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Intro (SQL hero) -->
-					<div id="intro" class="sql-hero">
-						<h1>Aryan Nair</h1>
-                        <h1>Portfolio</h1>
-
-						<p class="tagline">Transforming chaotic data into clear signals. I engineer clean data models and high-fidelity Power BI dashboards that drive business decisions.</p>
-						<div class="sql-terminal">
-							<div class="sql-terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-							<pre class="sql-query" id="sqlQuery"></pre>
-						</div>
-						<table class="sql-result" id="sqlResult">
-							<thead>
-								<tr><th>name</th><th>focus</th><th>stack</th><th>status</th></tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Aryan Nair</td>
-									<td>Data Analytics</td>
-									<td>Excel · SQL · Power BI · Python(Pandas)</td>
-									<td>Open to internships</td>
-								</tr>
-							</tbody>
-						</table>
-						<ul class="actions">
-                        	<li><a href="#projects" class="button icon outline scrolly">View Projects</a></li>
-                            <li><a href="resume.pdf" target="_blank" rel="noopener" class="button icon outline fa-file-pdf-o">View Resume</a></li>
-                            <li><a href="https://github.com/aryannair767" target="_blank" rel="noopener" class="button icon brands fa-github">GitHub</a></li>
-                        </ul>
-					</div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Aryan Nair</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#about">About</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://github.com/aryannair767" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.linkedin.com/in/aryannair767/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- About -->
-							<section id="about" class="about-block">
-								<h2>About</h2>
-								<p>Data Science undergrad with a singular focus on data analytics. I specialize in building end-to-end analytical pipelines, from cleaning & analyzing chaotic datasets using Excel, MySQL, and Pandas, to surfacing actionable business insights through interactive Power BI dashboards.</p>
-								<ul class="stack-tags">
-									<li>Excel</li>
-									<li>SQL / MySQL</li>
-									<li>Power BI</li>
-									<li>DAX</li>
-									<li>Tableau</li>
-									<li>Python / Pandas</li>
-								</ul>
-							</section>
-    
-						<!-- Featured Project -->
-							<article class="post featured" id="projects">
-								<header class="major">
-									<span class="date">Featured Project</span>
-									<h2><a href="https://github.com/aryannair767" target="_blank" rel="noopener">Retail Sales Analytics Pipeline</a></h2>
-									<p>End-to-end retail analytics: MySQL data cleaning, exploratory SQL, and a dark-themed Power BI dashboard with YoY growth tracking and DAX time-intelligence measures.</p>
-								</header>
-								<div class="carousel-container">
-									<button type="button" class="carousel-arrow" id="retailCarouselPrev" aria-label="Previous image">&#8249;</button>
-									<a href="https://github.com/aryannair767" target="_blank" rel="noopener" class="image main"><img src="images/pic10.jpg" id="retailCarouselImg" alt="Retail Sales Analytics Power BI dashboard preview" /></a>
-									<button type="button" class="carousel-arrow" id="retailCarouselNext" aria-label="Next image">&#8250;</button>
-								</div>
-								<ul class="actions special">
-									<li><a href="https://github.com/aryannair767" target="_blank" rel="noopener" class="button large github-button">View on GitHub</a></li>
-								</ul>
-							</article>
-
-						<!-- Other Projects -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/aryannair767/data-professional-survey-dashboard" target="_blank" rel="noopener">Data Professional Survey Dashboard</a></h2>
-									</header>
-									<a href="https://github.com/aryannair767" target="_blank" rel="noopener" class="image fit"><img src="images/pic11.png" alt="Data Professional Survey dashboard preview" /></a>
-									<p>An interactive Power BI dashboard analyzing salary, satisfaction, and career entry trends from 630 data professionals. I used Power Query to clean the raw data by standardizing inconsistent country names and converting categorical salary ranges into numeric midpoints to clearly visualize global compensation insights.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/aryannair767/data-professional-survey-dashboard" target="_blank" rel="noopener" class="button github-button">View on GitHub</a></li>
-									</ul>
-								</article>
-								<article class="in-progress">
-									<header>
-										<span class="date">In Progress</span>
-										<h2>Next Project</h2>
-									</header>
-									<p>Deciding between a SQL / Power BI supply chain operations audit and a Python / Pandas Spotify listening-habits analysis. Check back soon.</p>
-								</article>
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form id="contactForm" method="post" action="https://api.web3forms.com/submit">
-								<input type="hidden" name="access_key" value="e9021743-5e82-4674-87ce-43d769d4182a" />
-								<input type="hidden" name="subject" value="New message from portfolio site" />
-								<!-- Honeypot spam trap — must stay empty -->
-								<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" required minlength="2" autocomplete="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" required autocomplete="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3" required minlength="10"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-								<p id="formStatus" role="status" aria-live="polite" style="margin-top:0.8em; font-family:'IBM Plex Mono',monospace; font-size:0.85rem;"></p>
-							</form>
-						</section>
-						<section class="split contact">
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:aryannair767@gmail.com">aryannair767@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>GitHub</h3>
-								<p><a href="https://github.com/aryannair767" target="_blank" rel="noopener">github.com/aryannair767</a></p>
-							</section>
-							<section>
-								<h3>LinkedIn</h3>
-								<p><a href="https://www.linkedin.com/in/aryannair767/" target="_blank" rel="noopener">linkedin.com/in/aryannair767</a></p>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>Aryan Nair</li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-		<!-- SQL typewriter effect -->
-			<script>
-				(function () {
-					var lines = [
-						'<span class="sql-kw">SELECT</span> name, focus, stack, status',
-						'<span class="sql-kw">FROM</span> analysts',
-						'<span class="sql-kw">WHERE</span> name = <span class="sql-str">\'Aryan Nair\'</span>;' 
-					];
-					var full = lines.join('\n');
-					var target = document.getElementById('sqlQuery');
-					var resultTable = document.getElementById('sqlResult');
-					var plainLength = full.replace(/<[^>]+>/g, '').length;
-					var i = 0;
-
-					function typeChar() {
-						var shown = 0, pos = 0;
-						while (shown < i && pos < full.length) {
-							if (full[pos] === '<') {
-								var close = full.indexOf('>', pos);
-								pos = close + 1;
-							} else {
-								shown++;
-								pos++;
-							}
-						}
-						target.innerHTML = full.slice(0, pos) + '<span class="sql-cursor"></span>';
-						i++;
-						if (i <= plainLength) {
-							setTimeout(typeChar, 28);
-						} else {
-							target.innerHTML = full;
-							setTimeout(function () {
-								resultTable.classList.add('visible');
-							}, 250);
-						}
-					}
-					window.addEventListener('DOMContentLoaded', function () {
-						setTimeout(typeChar, 400);
-					});
-				})();
-			</script>
-
-		<!-- Contact form — Web3Forms AJAX submit -->
-			<script>
-				(function () {
-					var form = document.getElementById('contactForm');
-					var status = document.getElementById('formStatus');
-					if (!form) return;
-
-					form.addEventListener('submit', function (e) {
-						e.preventDefault();
-						status.style.color = 'var(--text-muted)';
-						status.textContent = 'Sending...';
-
-						fetch(form.action, {
-							method: 'POST',
-							body: new FormData(form),
-							headers: { 'Accept': 'application/json' }
-						})
-						.then(function (res) { return res.json(); })
-						.then(function (json) {
-							if (json.success) {
-								status.style.color = 'var(--accent-2)';
-								status.textContent = "Message sent — Thanks! I'll get back to you soon.";
-								form.reset();
-							} else {
-								status.style.color = 'var(--accent)';
-								status.textContent = 'Something went wrong. Please email me directly instead.';
-							}
-						})
-						.catch(function () {
-							status.style.color = 'var(--accent)';
-							status.textContent = 'Network error — please email me directly instead.';
-						});
-					});
-				})();
-			</script>
-
-	<!-- Retail Sales Analytics — image carousel -->
-		<script>
-			(function () {
-				// Real screenshots. Add more paths here as you get more.
-				var images = [
-					'images/pic10.jpg',
-					'images/pic12.png',
-					'images/pic13.png'
-				];
-				var index = 0;
-				var img = document.getElementById('retailCarouselImg');
-				var prevBtn = document.getElementById('retailCarouselPrev');
-				var nextBtn = document.getElementById('retailCarouselNext');
-				if (!img || !prevBtn || !nextBtn) return;
-
-				function updateArrows() {
-					// No wraparound: hide prev on the first image, hide next on the last image.
-					prevBtn.style.visibility = (index === 0) ? 'hidden' : 'visible';
-					nextBtn.style.visibility = (index === images.length - 1) ? 'hidden' : 'visible';
-				}
-
-				function show(i) {
-					index = Math.max(0, Math.min(images.length - 1, i));
-					img.src = images[index];
-					updateArrows();
-				}
-
-				nextBtn.addEventListener('click', function (e) {
-					e.preventDefault();
-					e.stopPropagation();
-					show(index + 1);
-				});
-				prevBtn.addEventListener('click', function (e) {
-					e.preventDefault();
-					e.stopPropagation();
-					show(index - 1);
-				});
-
-				updateArrows(); // set correct state on page load
-			})();
-		</script>
-
-	</body>
+<section id="skills">
+<div class="section-header"><h2>Skills</h2></div>
+<ul class="skill-tags reveal">
+<li><img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" alt="Excel" class="skill-icon"> Excel</li>
+<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon"> SQL / MySQL</li>
+<li><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" class="skill-icon"> Power BI</li>
+<li><i class="fas fa-code" style="color:#0078D4"></i> DAX</li>
+<li><img src="https://img.icons8.com/color/48/tableau-software.png" alt="Tableau" class="skill-icon"> Tableau</li>
+<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="skill-icon"> Python</li>
+<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="Pandas" class="skill-icon"> Pandas</li>
+<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" class="skill-icon"> Matplotlib</li>
+<li><img src="https://seaborn.pydata.org/_static/logo-mark-lightbg.svg" alt="Seaborn" class="skill-icon"> Seaborn</li>
+<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="NumPy" class="skill-icon"> NumPy</li>
+</ul>
+</section>
+<section id="projects">
+<div class="section-header"><h2>Projects</h2></div>
+<article class="project-featured reveal">
+<div class="project-featured-content">
+<span class="project-label">Featured Project</span>
+<h3><a href="https://github.com/aryannair767/end-to-end-retail-sales-analysis" target="_blank" rel="noopener">Retail Sales Analytics Pipeline</a></h3>
+<p>End-to-end retail analytics: MySQL data cleaning, exploratory SQL, and a dark-themed Power BI dashboard with YoY growth tracking and DAX time-intelligence measures.</p>
+<div class="impact-box">
+<span class="impact-title"><i class="fas fa-lightbulb"></i> Key Insight</span>
+<p>Transactions with discounts yield a higher Average Order Value (AOV). Restructure promotional campaigns to explicitly target high-value baskets rather than volume-driven sales to accelerate revenue growth.</p>
+</div>
+<a href="https://github.com/aryannair767/end-to-end-retail-sales-analysis" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+</div>
+<div class="project-featured-media">
+<div class="carousel">
+<button type="button" class="carousel-arrow carousel-prev" id="retailCarouselPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+<a href="https://github.com/aryannair767/end-to-end-retail-sales-analysis" target="_blank" rel="noopener" class="carousel-image-link">
+<img src="images/pic10.jpg" id="retailCarouselImg" class="lightbox-trigger" alt="Retail Sales Analytics" loading="lazy"/>
+</a>
+<button type="button" class="carousel-arrow carousel-next" id="retailCarouselNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+</div>
+<div class="carousel-dots" id="retailCarouselDots" role="tablist"></div>
+</div>
+</article>
+<div class="posts">
+<article class="post-card reveal">
+<a href="https://github.com/aryannair767/data-professional-survey-dashboard" target="_blank" rel="noopener" class="card-image">
+<img src="images/pic11.png" class="lightbox-trigger" alt="Data Professional Survey dashboard" loading="lazy"/>
+</a>
+<div class="card-body">
+<h3><a href="https://github.com/aryannair767/data-professional-survey-dashboard" target="_blank" rel="noopener">Data Professional Survey Dashboard</a></h3>
+<p>An interactive Power BI dashboard analyzing salary, satisfaction, and career entry trends from 630 data professionals. Used Power Query to standardize country names and convert salary ranges into numeric midpoints.</p>
+<div class="impact-box">
+<span class="impact-title"><i class="fas fa-lightbulb"></i> Key Insight</span>
+<p>Python overwhelmingly dominates as the preferred programming language (66.7%). Combined with Data Scientists commanding the highest average salaries, this indicates Python mastery is the critical driver for maximizing earning potential.</p>
+</div>
+<a href="https://github.com/aryannair767/data-professional-survey-dashboard" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+</div>
+</article>
+<article class="post-card post-card-progress reveal">
+<div class="card-body">
+<span class="project-label">In Progress</span>
+<h3>Next Project</h3>
+<p>Deciding between a SQL / Power BI supply chain operations audit and a Python / Pandas Spotify listening-habits analysis. Check back soon.</p>
+</div>
+</article>
+</div>
+</section>
+<section id="contact">
+<div class="section-header"><h2>Get in Touch</h2></div>
+<div class="contact-grid reveal">
+<div class="contact-links">
+<ul class="contact-list">
+<li><i class="fas fa-envelope"></i><a href="mailto:aryannair767@gmail.com">aryannair767@gmail.com</a></li>
+<li><i class="fab fa-github"></i><a href="https://github.com/aryannair767" target="_blank" rel="noopener">github.com/aryannair767</a></li>
+<li><i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/aryannair767/" target="_blank" rel="noopener">linkedin.com/in/aryannair767</a></li>
+</ul>
+</div>
+<form id="contactForm" method="post" action="https://api.web3forms.com/submit" novalidate>
+<input type="hidden" name="access_key" value="e9021743-5e82-4674-87ce-43d769d4182a"/>
+<input type="hidden" name="subject" value="New message from portfolio site"/>
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"/>
+<div class="field">
+<label for="name">Name</label>
+<input type="text" name="name" id="name" required minlength="2" autocomplete="name"/>
+</div>
+<div class="field">
+<label for="email">Email</label>
+<input type="email" name="email" id="email" required autocomplete="email"/>
+</div>
+<div class="field">
+<label for="message">Message</label>
+<textarea name="message" id="message" rows="4" required minlength="10"></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Send Message</button>
+<p id="formStatus" role="status" aria-live="polite"></p>
+</form>
+</div>
+</section>
+</div>
+<footer>
+<p>&copy; 2025 Aryan Nair. All rights reserved.</p>
+</footer>
+</div>
+<script src="assets/js/script.js"></script>
+<div id="lightbox" class="lightbox">
+<button type="button" class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+<img id="lightboxImg" src="" alt="Enlarged view"/>
+<button type="button" class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+</div>
+</body>
 </html>
