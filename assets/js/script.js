@@ -207,9 +207,14 @@ lightbox.addEventListener('click',function(e){
 if(e.target===lightbox){lightbox.classList.remove('visible');}
 });
 }
+function initFooterYear(){
+var yearEl=document.getElementById('currentYear');
+if(yearEl){yearEl.textContent=new Date().getFullYear();}
+}
 
 document.addEventListener('DOMContentLoaded',function(){
 initMobileSidebar();initScrollSpy();initReveal();
 initSqlTerminal();initCarousel();initContactForm();initLightbox();
+initFooterYear();
 });
 })();
