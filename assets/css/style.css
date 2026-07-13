@@ -73,7 +73,7 @@ display:flex;justify-content:space-between;align-items:center;
 padding:1rem 2.5rem;background:var(--white);
 border-top:1px solid var(--border);border-bottom:3px solid var(--accent)
 }
-.top-bar-brand{font-family:var(--serif);font-weight:600;font-size:1.15rem;color:var(--accent)}
+.top-bar-brand{font-weight:600;font-size:1.15rem;color:var(--accent)}
 .top-bar-socials{display:flex;gap:1rem;align-items:center}
 .top-bar-socials a{color:var(--muted);font-size:1.05rem;transition:color .2s;display:inline-flex}
 .top-bar-socials a:hover{color:var(--accent-dark)}
