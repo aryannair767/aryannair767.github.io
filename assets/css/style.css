@@ -82,13 +82,13 @@ border-top:1px solid var(--border);border-bottom:3px solid var(--accent)
 #about{margin-bottom:3rem}
 .about-grid{display:grid;grid-template-columns:1fr;gap:2rem}
 @media(min-width:900px){
-.about-grid{grid-template-columns:1fr 280px;align-items:stretch;gap:1.2rem}
+.about-grid{grid-template-columns:1fr 240px;align-items:stretch;gap:1.2rem}
 }
 .about-left{display:flex;flex-direction:column;gap:1.2rem;min-width:0}
 .about-left .banner{flex:1}
 .about-right{display:flex;flex-direction:column;align-items:center;gap:1.2rem}
 .profile-placeholder{
-width:100%;max-width:260px;aspect-ratio:1/1;border-radius:50%;
+width:100%;max-width:240px;aspect-ratio:1/1;border-radius:50%;
 overflow:hidden;border:1px solid var(--border);background:var(--off);
 display:flex;align-items:center;justify-content:center;
 box-shadow:0 8px 24px rgba(0,0,0,.06)
@@ -98,7 +98,7 @@ box-shadow:0 8px 24px rgba(0,0,0,.06)
 width:100%;height:100%;display:flex;align-items:center;justify-content:center;
 font-size:5rem;color:var(--faint)
 }
-.profile-actions{display:flex;flex-direction:column;gap:.6rem;width:100%;max-width:260px;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.2rem}
+.profile-actions{display:flex;flex-direction:column;gap:.6rem;width:100%;max-width:240px;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.2rem}
 .profile-actions .btn{width:100%;justify-content:center;text-align:center}
 .banner{background:var(--white);border:1px solid var(--border);border-radius:6px;
 padding:1.8rem 2.5rem;margin-bottom:0
@@ -147,7 +147,7 @@ section{margin-bottom:3rem}
 .skill-tags{display:grid;grid-template-columns:repeat(5,1fr);gap:1em;justify-items:center}
 .skill-tags li{
 display:flex;align-items:center;justify-content:center;gap:.65em;width:100%;
-font-family:var(--serif);font-size:1.38rem;font-weight:400;padding:.85em 1.2em;border:1px solid var(--border);
+font-family:var(--serif);font-size:1.05rem;font-weight:400;padding:.6em 1em;border:1px solid var(--border);
 border-radius:999px;color:#2c2c2c;background:var(--white);transition:border-color .2s,color .2s,transform .2s;
 white-space:nowrap
 }
