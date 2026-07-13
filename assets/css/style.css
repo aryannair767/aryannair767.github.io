@@ -218,18 +218,19 @@ display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s
 .post-card-progress{border-style:dashed}
 
 .contact-grid{display:grid;grid-template-columns:1fr;gap:2.5rem}
+#contactForm{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:6px;padding:2rem;box-shadow:0 12px 30px rgba(94,129,172,.15)}
 #contactForm .field{margin-bottom:1.15rem}
 #contactForm label{
-display:block;font-family:var(--mono);font-size:.85rem;text-transform:uppercase;
-letter-spacing:.06em;color:var(--muted);margin-bottom:.5em
+display:block;font-family:var(--sans);font-weight:600;font-size:.9rem;
+color:var(--text);margin-bottom:.5em
 }
 #contactForm input[type="text"],#contactForm input[type="email"],#contactForm textarea{
-width:100%;background:var(--white);border:1px solid var(--border);border-radius:4px;
-color:var(--text);font-family:var(--sans);font-size:1rem;padding:.75em .9em;transition:border-color .2s
+width:100%;background:var(--off);border:1px solid var(--border);border-radius:4px;
+color:var(--text);font-family:var(--sans);font-size:1rem;padding:.75em .9em;transition:border-color .2s,box-shadow .2s
 }
-#contactForm input:focus,#contactForm textarea:focus{border-color:var(--accent);outline:none}
+#contactForm input:focus,#contactForm textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--accent-light)}
 #contactForm textarea{resize:vertical;min-height:6em}
-#formStatus{margin-top:1rem;font-family:var(--mono);font-size:.85rem;color:var(--muted);min-height:1.2em}
+#formStatus{margin-top:1rem;font-family:var(--sans);font-weight:500;font-size:.9rem;color:var(--text);min-height:1.2em}
 
 .contact-links{background:var(--white);border:1px solid var(--border);border-top:4px solid var(--accent);border-radius:6px;padding:2rem;box-shadow:0 12px 30px rgba(94,129,172,.15)}
 .contact-list li{
@@ -237,7 +238,7 @@ display:flex;align-items:center;gap:1rem;padding:.75rem 0;
 font-size:1rem;border-bottom:1px solid rgba(0,0,0,.08)
 }
 .contact-list li:last-child{border-bottom:none}
-.contact-list li i{color:var(--accent-dark);width:18px;text-align:center;font-size:1.1rem}
+.contact-list li img.contact-icon{width:24px;height:24px;object-fit:contain}
 .contact-list li a{color:var(--text);font-weight:600}
 .contact-list li a:hover{color:var(--accent-dark);text-decoration:none}
 
