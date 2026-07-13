@@ -69,16 +69,23 @@ return escaped;
 function initSqlTerminal(){
 var queryEl=document.getElementById('sqlQuery');
 var resultTable=document.getElementById('sqlResult');
-if(!queryEl||!resultTable)return;
+var panel=document.querySelector('.db-panel');
+if(!queryEl||!resultTable||!panel)return;
 var codeEls=Array.prototype.slice.call(queryEl.querySelectorAll('.db-code'));
 if(!codeEls.length)return;
 var linesPlain=codeEls.map(function(el){return el.textContent;});
 function showResult(){resultTable.classList.add('visible');}
+codeEls.forEach(function(el){el.textContent='';});
+var hasRun=false;
+var observer=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if(entry.isIntersecting&&!hasRun){
+hasRun=true;
+observer.unobserve(entry.target);
 if(reducedMotion){
 codeEls.forEach(function(el,i){el.innerHTML=highlightSql(linesPlain[i]);});
 showResult();return;
 }
-codeEls.forEach(function(el){el.textContent='';});
 var lineIndex=0,charIndex=0;
 var cursor=document.createElement('span');
 cursor.className='db-cursor';
@@ -96,6 +103,10 @@ lineIndex++;charIndex=0;setTimeout(typeStep,120);
 }
 }
 setTimeout(typeStep,450);
+}
+});
+},{threshold:0.2});
+observer.observe(panel);
 }
 
 function initCarousel(){
