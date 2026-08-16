@@ -211,10 +211,30 @@ function initFooterYear(){
 var yearEl=document.getElementById('currentYear');
 if(yearEl){yearEl.textContent=new Date().getFullYear();}
 }
+function initDarkMode(){
+var btn=document.getElementById('darkModeBtn');
+if(!btn)return;
+var icon=btn.querySelector('i');
+var stored=localStorage.getItem('darkMode');
+if(stored==='on'){
+document.body.classList.add('dark-mode');
+if(icon){icon.classList.remove('fa-moon');icon.classList.add('fa-sun');}
+btn.title='Light mode';
+}
+btn.addEventListener('click',function(){
+var isDark=document.body.classList.toggle('dark-mode');
+localStorage.setItem('darkMode',isDark?'on':'off');
+if(icon){
+icon.classList.toggle('fa-moon',!isDark);
+icon.classList.toggle('fa-sun',isDark);
+}
+btn.title=isDark?'Light mode':'Dark mode';
+});
+}
 
 document.addEventListener('DOMContentLoaded',function(){
 initMobileSidebar();initScrollSpy();initReveal();
 initSqlTerminal();initCarousel();initContactForm();initLightbox();
-initFooterYear();
+initFooterYear();initDarkMode();
 });
 })();
