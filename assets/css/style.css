@@ -291,8 +291,8 @@ margin-left:.25rem
 
 /* ── Dark Mode ── */
 body.dark-mode{
---white:#141414;
---off:#0e0e0e;
+--white:#0e0e0e;
+--off:#181818;
 --border:#2a2a2a;
 --border-light:#333333;
 --text:#c8ccd4;
@@ -328,13 +328,14 @@ body.dark-mode .carousel-dot{background:var(--border)}
 body.dark-mode .carousel-dot.active{background:var(--accent)}
 body.dark-mode .post-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.3)}
 body.dark-mode .post-card-progress{border-color:var(--border)}
-body.dark-mode #contactForm{background:var(--white);border-color:var(--border);border-top-color:var(--accent);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+body.dark-mode #contactForm{background:var(--white);border-color:var(--border);border-top-color:var(--accent);box-shadow:0 12px 30px rgba(0,0,0,.2),0 0 20px rgba(94,129,172,.15)}
 body.dark-mode #contactForm input[type="text"],
 body.dark-mode #contactForm input[type="email"],
-body.dark-mode #contactForm textarea{background:#0c0c0c;border-color:var(--border);color:var(--text)}
+body.dark-mode #contactForm textarea{background:#1c1c1c;border-color:var(--border);color:var(--text)}
 body.dark-mode #contactForm input:focus,
 body.dark-mode #contactForm textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(109,159,209,.15)}
-body.dark-mode .contact-links{background:var(--white);border-color:var(--border);border-top-color:var(--accent);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+body.dark-mode .contact-links{background:var(--white);border-color:var(--border);border-top-color:var(--accent);box-shadow:0 12px 30px rgba(0,0,0,.2),0 0 20px rgba(94,129,172,.15)}
+body.dark-mode .contact-list li img.contact-icon[alt="GitHub"]{filter:invert(1)}
 body.dark-mode .contact-list li{border-bottom-color:rgba(255,255,255,.06)}
 body.dark-mode .contact-list li a{color:var(--text)}
 body.dark-mode .contact-list li a:hover{color:var(--accent)}

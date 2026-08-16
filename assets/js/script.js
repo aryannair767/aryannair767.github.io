@@ -206,6 +206,12 @@ if(currentIndex<gallery.length-1){currentIndex++;showLightbox();}
 lightbox.addEventListener('click',function(e){
 if(e.target===lightbox){lightbox.classList.remove('visible');}
 });
+document.addEventListener('keydown',function(e){
+if(!lightbox.classList.contains('visible'))return;
+if(e.key==='ArrowRight'&&currentIndex<gallery.length-1){currentIndex++;showLightbox();}
+else if(e.key==='ArrowLeft'&&currentIndex>0){currentIndex--;showLightbox();}
+else if(e.key==='Escape'){lightbox.classList.remove('visible');}
+});
 }
 function initFooterYear(){
 var yearEl=document.getElementById('currentYear');
