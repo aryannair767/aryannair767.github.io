@@ -9,12 +9,22 @@
 <meta property="og:title" content="Aryan Nair — Data Analyst"/>
 <meta property="og:description" content="SQL, Power BI, and Python projects. Open to data analyst internships."/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="images/pic10.jpg"/>
+<meta property="og:image" content="images/b2b-churn-dashboard.png"/>
 <link rel="stylesheet" href="assets/css/style.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+.tech-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0 .25rem}
+.tech-tag{font-family:var(--mono);font-size:.75rem;font-weight:500;padding:.25rem .7rem;border-radius:4px;background:var(--accent-light);color:var(--accent-dark);border:1px solid var(--border-light);letter-spacing:.02em}
+.project-featured-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1rem}
+.card-gallery{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;padding:.4rem}
+.card-gallery a{display:block;border-radius:6px;overflow:hidden;transition:opacity .2s}
+.card-gallery a:hover{opacity:.85}
+.card-gallery img{width:100%;height:auto;display:block}
+body.dark-mode .tech-tag{background:rgba(94,129,172,.15);color:#8fb4d8;border-color:rgba(94,129,172,.25)}
+</style>
 </head>
 <body>
 <nav id="sidebar">
@@ -122,6 +132,90 @@
 <article class="project-featured reveal">
 <div class="project-featured-content">
 <span class="project-label">Featured Project</span>
+<h3><a href="https://github.com/aryannair767/b2b-churn-analysis-with-ml" target="_blank" rel="noopener">B2B SaaS Churn Analytics Pipeline</a></h3>
+<p>Built to predict B2B customer churn before a cancellation request ever happens. I used SQL to extract behavioral patterns from raw usage data, trained a Random Forest model to flag at-risk accounts, and deployed the final predictions into a live Streamlit app so the Customer Success team can take action.</p>
+<div class="tech-tags">
+<span class="tech-tag">SQL</span>
+<span class="tech-tag">Python</span>
+<span class="tech-tag">scikit-learn</span>
+<span class="tech-tag">Streamlit</span>
+<span class="tech-tag">Power BI</span>
+</div>
+<div class="impact-box">
+<span class="impact-title"><i class="fas fa-lightbulb"></i> Key Insight</span>
+<p>A 65% drop in platform activity and a heavy reliance on a single "champion" user are the strongest predictors of churn. By tracking these specific behaviors, the model flagged 241 active high-risk accounts, isolating $521,000 in monthly recurring revenue for early intervention.</p>
+</div>
+<div class="project-featured-actions">
+<a href="https://github.com/aryannair767/b2b-churn-analysis-with-ml" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+<a href="https://saas-churn-prediction-system.streamlit.app/" target="_blank" rel="noopener" class="btn btn-outline"><i class="fas fa-rocket"></i> Live App</a>
+</div>
+</div>
+<div class="project-featured-media">
+<div class="carousel">
+<button type="button" class="carousel-arrow carousel-prev" id="b2bCarouselPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+<div class="carousel-image-link">
+<img src="images/pic10.jpg" id="b2bCarouselImg" alt="B2B SaaS Churn Analytics Dashboard" loading="lazy" style="cursor:zoom-in"/>
+</div>
+<button type="button" class="carousel-arrow carousel-next" id="b2bCarouselNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+</div>
+<div class="carousel-dots" id="b2bCarouselDots" role="tablist"></div>
+<script>
+(function(){
+var imgs=['images/pic10.jpg','images/querySS1.png','images/querySS2.png','images/querySS3.png','images/pic12.png','images/pic13.png','images/shap-plot.png'];
+var img=document.getElementById('b2bCarouselImg'),
+prev=document.getElementById('b2bCarouselPrev'),
+next=document.getElementById('b2bCarouselNext'),
+dotsWrap=document.getElementById('b2bCarouselDots');
+if(!img||!prev||!next||!dotsWrap)return;
+dotsWrap.innerHTML='';var idx=0,dots=[],numDots=3;
+for(var n=0;n<numDots;n++){(function(n){var d=document.createElement('button');d.type='button';d.className='carousel-dot';
+d.setAttribute('aria-label','Section '+(n+1)+' of '+numDots);
+d.addEventListener('click',function(){show(Math.round(n*(imgs.length-1)/(numDots-1)));});
+dotsWrap.appendChild(d);dots.push(d);})(n);}
+function activeDot(){return Math.round(idx/(imgs.length-1)*(numDots-1));}
+function show(i){idx=Math.max(0,Math.min(imgs.length-1,i));img.src=imgs[idx];
+prev.style.visibility=idx===0?'hidden':'visible';
+next.style.visibility=idx===imgs.length-1?'hidden':'visible';
+var a=activeDot();dots.forEach(function(d,j){d.classList.toggle('active',j===a);});}
+prev.onclick=function(e){e.preventDefault();show(idx-1);};
+next.onclick=function(e){e.preventDefault();show(idx+1);};
+img.onclick=function(e){e.stopPropagation();if(window.openCustomLightbox)window.openCustomLightbox(imgs,idx);};
+show(0);
+})();
+</script>
+</div>
+</article>
+<div class="posts">
+<article class="post-card reveal">
+<div class="carousel">
+<button type="button" class="carousel-arrow carousel-prev" id="retailCardPrev" aria-label="Previous" style="visibility:hidden"><i class="fas fa-chevron-left"></i></button>
+<div class="carousel-image-link">
+<img src="images/retail-dashboard-2.png" id="retailCardImg" alt="Retail Sales Analytics Pipeline dashboard" loading="lazy" style="cursor:zoom-in"/>
+</div>
+<button type="button" class="carousel-arrow carousel-next" id="retailCardNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+</div>
+<div class="carousel-dots" id="retailCardDots" role="tablist"></div>
+<script>
+(function(){
+var imgs=['images/retail-dashboard-2.png','images/retail-sql.png'];
+var idx=0,img=document.getElementById('retailCardImg'),
+prev=document.getElementById('retailCardPrev'),
+next=document.getElementById('retailCardNext'),
+dotsWrap=document.getElementById('retailCardDots'),dots=[];
+imgs.forEach(function(_,i){var d=document.createElement('button');d.type='button';d.className='carousel-dot';
+d.setAttribute('aria-label','Show image '+(i+1)+' of '+imgs.length);
+d.addEventListener('click',function(){show(i);});dotsWrap.appendChild(d);dots.push(d);});
+function show(i){idx=Math.max(0,Math.min(imgs.length-1,i));img.src=imgs[idx];
+prev.style.visibility=idx===0?'hidden':'visible';
+next.style.visibility=idx===imgs.length-1?'hidden':'visible';
+dots.forEach(function(d,j){d.classList.toggle('active',j===idx);});}
+next.addEventListener('click',function(e){e.preventDefault();show(idx+1);});
+prev.addEventListener('click',function(e){e.preventDefault();show(idx-1);});
+img.onclick=function(e){e.stopPropagation();if(window.openCustomLightbox)window.openCustomLightbox(imgs,idx);};
+show(0);
+})();
+</script>
+<div class="card-body">
 <h3><a href="https://github.com/aryannair767/end-to-end-retail-sales-analysis" target="_blank" rel="noopener">Retail Sales Analytics Pipeline</a></h3>
 <p>End-to-end retail analytics: MySQL data cleaning, exploratory SQL, and a dark-themed Power BI dashboard with YoY growth tracking and DAX time-intelligence measures.</p>
 <div class="impact-box">
@@ -130,22 +224,17 @@
 </div>
 <a href="https://github.com/aryannair767/end-to-end-retail-sales-analysis" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub <i class="fas fa-external-link-alt"></i></a>
 </div>
-<div class="project-featured-media">
-<div class="carousel">
-<button type="button" class="carousel-arrow carousel-prev" id="retailCarouselPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-<a href="https://github.com/aryannair767/end-to-end-retail-sales-analysis" target="_blank" rel="noopener" class="carousel-image-link">
-<img src="images/pic10.jpg" id="retailCarouselImg" class="lightbox-trigger" alt="Retail Sales Analytics" loading="lazy"/>
-</a>
-<button type="button" class="carousel-arrow carousel-next" id="retailCarouselNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-</div>
-<div class="carousel-dots" id="retailCarouselDots" role="tablist"></div>
-</div>
 </article>
-<div class="posts">
 <article class="post-card reveal">
-<a href="https://github.com/aryannair767/data-professional-survey-dashboard" target="_blank" rel="noopener" class="card-image">
-<img src="images/pic11.png" class="lightbox-trigger" alt="Data Professional Survey dashboard" loading="lazy"/>
-</a>
+<div class="card-image" style="cursor:zoom-in">
+<img src="images/pic11.png" id="surveyCardImg" alt="Data Professional Survey dashboard" loading="lazy"/>
+</div>
+<script>
+(function(){
+var img=document.getElementById('surveyCardImg');
+if(img)img.onclick=function(e){e.stopPropagation();if(window.openCustomLightbox)window.openCustomLightbox(['images/pic11.png'],0);};
+})();
+</script>
 <div class="card-body">
 <h3><a href="https://github.com/aryannair767/data-professional-survey-dashboard" target="_blank" rel="noopener">Data Professional Survey Dashboard</a></h3>
 <p>An interactive Power BI dashboard analyzing salary, satisfaction, and career entry trends from 630 data professionals. Used Power Query to standardize country names and convert salary ranges into numeric midpoints.</p>
@@ -156,13 +245,7 @@
 <a href="https://github.com/aryannair767/data-professional-survey-dashboard" target="_blank" rel="noopener" class="btn btn-primary">View on GitHub <i class="fas fa-external-link-alt"></i></a>
 </div>
 </article>
-<article class="post-card post-card-progress reveal">
-<div class="card-body">
-<span class="project-label">In Progress</span>
-<h3>Next Project</h3>
-<p>Deciding between a SQL / Power BI supply chain operations audit and a Python / Pandas Spotify listening-habits analysis. Check back soon.</p>
-</div>
-</article>
+
 </div>
 </section>
 <section id="contact">
@@ -202,10 +285,42 @@
 </footer>
 </div>
 <script src="assets/js/script.js"></script>
-<div id="lightbox" class="lightbox">
-<button type="button" class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-<img id="lightboxImg" src="" alt="Enlarged view"/>
-<button type="button" class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+<div id="customLightbox" class="lightbox">
+<button type="button" class="lightbox-arrow lightbox-prev" id="customLightboxPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+<img id="customLightboxImg" src="" alt="Enlarged view"/>
+<button type="button" class="lightbox-arrow lightbox-next" id="customLightboxNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
 </div>
+<script>
+(function(){
+  var lb = document.getElementById('customLightbox');
+  var lbImg = document.getElementById('customLightboxImg');
+  var lbPrev = document.getElementById('customLightboxPrev');
+  var lbNext = document.getElementById('customLightboxNext');
+
+  var curGal = [], curIdx = 0;
+  function render(){
+    if(!curGal.length) return;
+    lbImg.src = curGal[curIdx];
+    lbPrev.style.visibility = curIdx > 0 ? 'visible' : 'hidden';
+    lbNext.style.visibility = curIdx < curGal.length - 1 ? 'visible' : 'hidden';
+  }
+
+  window.openCustomLightbox = function(gallery, idx) {
+    curGal = gallery; curIdx = idx; render();
+    lb.classList.add('visible');
+  };
+
+  lbPrev.onclick = function(e){ e.stopPropagation(); if(curIdx > 0){ curIdx--; render(); } };
+  lbNext.onclick = function(e){ e.stopPropagation(); if(curIdx < curGal.length - 1){ curIdx++; render(); } };
+  lb.onclick = function(e){ if(e.target === lb) lb.classList.remove('visible'); };
+
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('visible')) return;
+    if(e.key === 'ArrowRight' && curIdx < curGal.length - 1){ curIdx++; render(); }
+    else if(e.key === 'ArrowLeft' && curIdx > 0){ curIdx--; render(); }
+    else if(e.key === 'Escape'){ lb.classList.remove('visible'); }
+  });
+})();
+</script>
 </body>
 </html>
