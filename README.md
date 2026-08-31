@@ -10,7 +10,6 @@ Data Science undergraduate focused on data analytics. I design and implement end
 
 *   **Data Analysis & Querying**: SQL (MySQL), Python (Pandas)
 *   **Business Intelligence**: Power BI (DAX), Tableau, Excel
-*   **Version Control**: Git, GitHub
 
 ---
 
